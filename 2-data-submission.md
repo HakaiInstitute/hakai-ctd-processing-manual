@@ -1,7 +1,7 @@
 ## Field Data and Metadata Upload
 
 <p align="center">
-<img src="Hakai-ctd-processing-workflow-figure-2-ingestion.png" alt="Ingestion" width="600"/>
+<img src="figures/Hakai-ctd-processing-workflow-figure-2-ingestion.png" alt="Ingestion" width="600"/>
 </p>
 ### Field Data Submission
 

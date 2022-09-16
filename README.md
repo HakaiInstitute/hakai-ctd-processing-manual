@@ -11,5 +11,5 @@ This repository present and link the different components associated with the Ha
 And summarized through the following flow diagram:
 
 <p align="center">
-<img src="Hakai-ctd-processing-workflow-figure-1-summary.png" alt="Summary Workflow" width="500"/>
+<img src="figures/Hakai-ctd-processing-workflow-figure-1-summary.png" alt="Summary Workflow" width="500"/>
 </p>

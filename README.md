@@ -2,7 +2,9 @@
 
 This repository present and link the different components associated with the Hakai CTD Processing Workflow. Which is following the present pipeline:
 
+<p align="center">
 <img src="Hakai-ctd-processing-workflow-figure-1-summary.png" alt="Summary Workflow" width="500"/>
+</p>
 
 ---
 
@@ -58,8 +60,9 @@ RBR Solo data is downloaded by the same software used by the RBR CTD instruments
 
 ## Field Data and Metadata Upload
 
+<p align="center">
 <img src="Hakai-ctd-processing-workflow-figure-2-ingestion.png" alt="Ingestion" width="600"/>
-
+</p>
 ### Field Data Submission
 
 Once a field survey completed, save and submit the field form. Retrieve the corresponding lab form within the associated lab tablet and review the different fields entered in the field. Confirm the metadata submitted and complete the final submission of the lab form.
@@ -134,7 +137,9 @@ To annotate drops associated with a survey:
 
 Hakai follow the standard data processing procedures suggested by either the scientific community of the instrument manufacturer.
 
+<p align="center">
 <img src="Hakai-ctd-processing-workflow-figure-3-processing.png" alt="Processing" width="600"/>
+</p>
 
 ### RBR Data Processing
 
@@ -160,7 +165,9 @@ The dynamic deployment corresponds to a profile measurement. For a more detailed
 
 ## Hakai CTD Data QA QC
 
+<p align="center">
 <img src="Hakai-ctd-processing-workflow-figure-4-qc.png" alt="QC" width="600"/>
+</p>
 
 ### Automated Data QA QC (provisional data)
 

@@ -1,0 +1,29 @@
+## CTD Data Standardized Data Processsing
+
+Hakai follow the standard data processing procedures suggested by either the scientific community of the instrument manufacturer.
+
+<p align="center">
+<img src="Hakai-ctd-processing-workflow-figure-3-processing.png" alt="Processing" width="600"/>
+</p>
+
+### RBR Data Processing
+
+The Hakai RBR CTD Profiles standard processing procedure follows the recommandations provided within the Report [Guidelines for processing RBR CTD profiles](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40578112.pdf) and RBR recommendations.
+
+#### Static Deployment
+
+A static deployment is a special case where the instrument has to be maintained at a specific location and depth for a minimum duration.
+
+This type of deployment has been implemented to provide the ability to sample regions associated with very shallow waters.
+
+To be considered as a static measurement, a sample needs to respect the following conditions:
+
+1. The instrument needs to be **maintained at a specific location and depth for at least 2 minutes and 30 seconds** (We recommend leaving the instrument for at least 3 minutes).
+2. The depth throughout that period can only vary by either 10cm, 33% of the depth or up to 1m, whichever is greater.
+3. The instrument needs to be deeper than 10cm in the water.
+
+#### Dynamic Deployment
+
+The dynamic deployment corresponds to a profile measurement. For a more detailed description of the procedure as recommended by the Hakai Institute, please refer to the [Hakai CTD Profile Data Processing Manual](https://docs.google.com/document/d/1ARnOcHvuxj4usH8uhaMJyEGsSERe2cTW4V0jl5DUO00/edit?usp=sharing).
+
+### Seabird Data Processing

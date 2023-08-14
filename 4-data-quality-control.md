@@ -1,6 +1,6 @@
 ## Hakai CTD Data QA QC
 
-Hakai uses a unique tool to automatically QC the CTD profile data. The QCing tool relies on the IOOS_QC packaged and a series of in house tests.
+Hakai uses a unique tool to automatically QC the CTD profile data. The QCing tool relies on the IOOS_QC packaged and a series of in-house tests.
 
 The general QAQC workflow is summarized in the following diagram:
 

@@ -12,9 +12,9 @@ The general QAQC workflow is summarized in the following diagram:
 
 The automated QC tool is available and maintained within the [hakai-profile-qaqc](https://github.com/HakaiInstitute/hakai-profile-qaqc) repository.
 
-The tool runs essentially a series of tests available within the [IOOS QC package](https://github.com/ioos/ioos_qc) and a series of in house tests.
+The tool runs essentially a series of tests available within the [IOOS QC package](https://github.com/ioos/ioos_qc) and a series of in-house tests.
 
-The following configuration files are used to apply the different test to each individual variables:
+The following configuration files are used to apply the different tests to each individual variable:
 
 1. [IOOS QC Config](https://github.com/HakaiInstitute/hakai-profile-qaqc/blob/main/hakai_profile_qc/config/hakai_ctd_profile_qartod_test_config.json)
 1. [Hakai Tests Configuration](https://github.com/HakaiInstitute/hakai-profile-qaqc/blob/main/hakai_profile_qc/config/hakai_ctd_profile_tests_config.json)
@@ -22,8 +22,8 @@ The following configuration files are used to apply the different test to each i
 
 For a more detailed description of the different tests applied, please refer to the [tests_description section](https://github.com/HakaiInstitute/hakai-profile-qaqc/blob/main/tests_description.md).
 
-### Manual Review QA QC (research ready data)
+### Manual Review QA QC (research-ready data)
 
-A Manual Review Process is completed by a designated person which review each individual profiles and applies a flag to each individual variable profiles. Only the data associated with a `AV` flag value are then considered and presented through the Hakai Research Dataset.
+A Manual Review Process is completed by a designated person who reviews each individual profile and applies a flag to each individual variable profile. Only the data associated with an `AV` flag value are then considered and presented through the Hakai Research Dataset.
 
-The Hakai manually QCed log is retrievable through the [Hakai Portal download](https://hecate.hakai.org/portal2/download) page as `CTD QC Tool` sample type and within the hakai `ctd.ctd_qc` table within the Hakai Database.
+The Hakai manually QCed log is retrievable through the [Hakai Portal download](https://hecate.hakai.org/portal2/download) page as `CTD QC Tool` sample type and within the Hakai `ctd.ctd_qc` table within the Hakai Database.

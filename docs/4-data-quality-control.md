@@ -5,7 +5,7 @@ Hakai uses a unique tool to automatically QC the CTD profile data. The QCing too
 The general QAQC workflow is summarized in the following diagram:
 
 <p align="center">
-<img src="figures/Hakai-ctd-processing-workflow-figure-4-qc.png" alt="QC" width="600"/>
+<img src="assets/figures/Hakai-ctd-processing-workflow-figure-4-qc.png" alt="QC" width="600"/>
 </p>
 
 ### Automated Data QA QC (provisional data)

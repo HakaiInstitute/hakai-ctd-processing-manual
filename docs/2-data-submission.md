@@ -5,9 +5,9 @@
 </p>
 ### Field Data Submission
 
-Once a field survey completed, save and submit the field form. Retrieve the corresponding lab form within the associated lab tablet and review the different fields entered in the field. Confirm the metadata submitted and complete the final submission of the lab form.
+Once a field survey is completed, save and submit the field form. Retrieve the corresponding lab form within the associated lab tablet and review the different fields entered in the field. Confirm the metadata submitted and complete the final submission of the lab form.
 
-Once submitted, those lab forms are sent to the Hakai Servers and integrated within our database.
+Once submitted, those lab forms are sent to the Hakai Servers and integrated into our database.
 
 ### Instrument Data Submission
 
@@ -15,7 +15,7 @@ The data must be first downloaded from the CTD instruments following a survey th
 
 Once downloaded, the data needs to be manually uploaded to the [Hakai Data Portal ](https://hecate.hakai.org/portal2) (if needed access request can be made [here](https://hecate.hakai.org/auth/access-request.php)). Follow the present procedure:
 
-1. Log in with your authorized email account
+1. Login with your authorized email account
 2. Go to the [CTD Upload page](https://hecate.hakai.org/portal2/ctd/upload)
 3. Select the appropriate Work Area
 4. Drag and drop the files downloaded from the instruments
@@ -25,7 +25,7 @@ Once downloaded, the data needs to be manually uploaded to the [Hakai Data Porta
 
 ## Instrument Raw Data Ingestion
 
-Once uploaded to the Hakai Server, the data is then copied and stored within the organization Amazon S3 bucket.
+Once uploaded to the Hakai Server, the data is then copied and stored within the organization's Amazon S3 bucket.
 
 ### RBR
 
@@ -34,17 +34,17 @@ Once uploaded to the Hakai Server, the data is then copied and stored within the
 RBR RSK format which is essentially an SQLite3 file which is following RBR's standard format is parsed to an R-Text equivalent file to be ingested within the Hakai Database.
 
 The MatLab Hakai tool used to convert the RSK file can be here https://github.com/HakaiInstitute/hakai-data-tools/blob/master/ctd-tools/rbr-proc/RSK2HakaiJSON.m
-The tool essentially is a wrapper around the [RSKTools MatLab package](https://rbr-global.com/support/matlab-tools/) developped by RBR. The tool reads the RSK file via the RSKopen and RSKreaddata functions which loads the RSK data into a MatLab environment structure.
+The tool essentially is a wrapper around the [RSKTools MatLab package](https://rbr-global.com/support/matlab-tools/) developed by RBR. The tool reads the RSK file via the RSKopen and RSKreaddata functions which loads the RSK data into a MatLab environment structure.
 
-The resulting structure is then stored as a json string within the header of the outputted file and the data stored as a table following the same convetioned used by the RText format.
+The resulting structure is then stored as a JSON string within the header of the outputted file and the data is stored as a table following the same convention used by the RText format.
 
 The tool is deployed on the server as a docker container. This tool is used and compatible with both CTD and solo pressure gauge instruments.
 
 #### RText Data Ingestion
 
-RText or RSK converted data is then parsed and ingested into the Hakai database through the hakai-api tool https://github.com/HakaiInstitute/hakai-api/blob/main/src/routes/ctd/utils/rbr/parse.js
+RText or RSK converted data is then parsed and ingested into the Hakai database through the `hakai-api` tool https://github.com/HakaiInstitute/hakai-api/blob/main/src/routes/ctd/utils/rbr/parse.js
 
-The tool rely on the RBR shortName convention to assigne each data column to the corresponding database table column within the `ctd.raw_ctd_data` table.
+The tool relies on the RBR shortName convention to assign each data column to the corresponding database table column within the `ctd.raw_ctd_data` table.
 
 #### Cast Detection
 

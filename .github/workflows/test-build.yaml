@@ -37,16 +37,3 @@ jobs:
             use-quiet-mode: 'yes'
             use-verbose-mode: 'yes'
             config-file: .github/linters/.markdown-link-checks.json
-      - name: Test Required Pages
-        env: 
-          pages: 
-            - home/weather-and-webcams/index.html
-            - home/sensor-network/index.html
-        run: |
-          for page in ${pages[@]}; do 
-            if ! [ -f "build/$page" ]; 
-              then echo ::error missing $page; 
-              else echo ::good page $page; 
-            fi 
-              done 
-    

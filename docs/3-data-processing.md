@@ -41,7 +41,7 @@ This type of deployment has been implemented to provide the ability to sample re
 
 To be considered a static measurement, a sample needs to respect the following conditions:
 
-```
+```console
 1. The instrument needs to be **maintained at a specific location and depth for at least 2 minutes and 30 seconds** (We recommend leaving the instrument for at least 3 minutes).
 2. The depth throughout that period can only vary by either 10cm, 33% of the depth or up to 1m, whichever is greater.
 3. The instrument needs to be deeper than 10cm in the water.

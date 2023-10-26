@@ -27,6 +27,7 @@ MD029: false                  # Ordered list item prefix
 MD033: false                  # Allow inline HTML
 MD036: false                  # Emphasis used instead of a heading
 MD041: false                  # Top header is handled by mkdocs.yml
+MD046: false # seems to have some issues
 
 #################
 # Rules by tags #

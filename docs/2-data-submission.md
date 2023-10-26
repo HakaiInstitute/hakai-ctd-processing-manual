@@ -54,7 +54,7 @@ The ["cast detection tool"](https://github.com/HakaiInstitute/hakai-api/blob/mai
 
 ### Seabird
 
-Seabird \*.hex files are considered been each associated to a unique drop and for this reason the conversion and ingestion process is performed at the very beginning of the [Seabird Data Processing](#seabird-data-processing) step.
+Seabird \*.hex files are considered been each associated to a unique drop and for this reason the conversion and ingestion process is performed at the very beginning of the [Seabird Data Processing](3-data-processing.md#seabird-data-processing) step.
 
 ## Field Data and Metadata Annotation
 

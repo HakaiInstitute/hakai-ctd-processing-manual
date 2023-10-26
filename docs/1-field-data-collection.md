@@ -1,6 +1,6 @@
 ## Field Data Collection
 
-Data is first collected in the field by the field crew. The minimum required equipment is a CTD instrument unit and a tablet or phone (android or iOS) with the [Device Magic](https://www.devicemagic.com/) application installed on it linked to the Hakai Device Magic account.
+Data is first collected in the field by the field crew. The minimum required equipment is a CTD instrument unit and a tablet or phone (Android or iOS) with the [Device Magic](https://www.devicemagic.com/) application installed on it linked to the Hakai Device Magic account.
 
 ### Field Metadata from form (Device Magic app)
 

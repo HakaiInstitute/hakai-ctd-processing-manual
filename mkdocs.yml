@@ -1,12 +1,12 @@
 site_description: CTD Processing Manual
 site_name: Hakai CTD Processing Manual
 repo_url: https://github.com/HakaiInstitute/hakai-ctd-processing-manual
-repo_name: HakaiInstitute/hakai-data
+repo_name: HakaiInstitute/hakai-ctd-processing-manual
 edit_uri: tree/main/docs
 copyright: Copyright &copy; Hakai Institute
 
 nav:
-    - index.md
+    - Home: index.md
     - Field Collection: 1-field-data-collection.md
     - Submission: 2-data-submission.md
     - Processing: 3-data-processing.md

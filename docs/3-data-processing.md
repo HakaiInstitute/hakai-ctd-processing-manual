@@ -2,9 +2,7 @@
 
 Hakai follows the standard data processing procedures suggested by either the scientific community or the instrument manufacturer.
 
-<p align="center">
-<img src="assets/figures/Hakai-ctd-processing-workflow-figure-3-processing.png" alt="Processing" width="600"/>
-</p>
+![data processing ](assets/figures/Hakai-ctd-processing-workflow-figure-3-processing.png)
 
 ### RBR Data Processing
 
@@ -12,9 +10,9 @@ The Hakai RBR CTD Profiles standard processing procedure follows the recommendat
 
 The main Matlab tool used to process Hakai RBR CTD profiles is maintained and available at [hakai-ctd-tools/ctd-tools/rbr-proc](https://github.com/HakaiInstitute/hakai-data-tools/tree/master/ctd-tools/rbr-proc).
 
-Where essentially the MatLab script [process_unprocessed_hakai_profiles.m](https://github.com/HakaiInstitute/hakai-data-tools/blob/master/ctd-tools/rbr-proc/process_unprocessed_hakai_profiles.m) is run every 5 minutes on the Hakai server Hecate to retrieve and process the unprocessed profiles available within the Hakai database ctd.ctd_file_cast view through the api endpoint `/ctd/views/file/cast`:
+Where essentially the MatLab script [process_unprocessed_hakai_profiles.m](https://github.com/HakaiInstitute/hakai-data-tools/blob/master/ctd-tools/rbr-proc/process_unprocessed_hakai_profiles.m) is run every 5 minutes on the Hakai server Hecate to retrieve and process the unprocessed profiles available within the Hakai database ctd.ctd_file_cast view through the API endpoint `/ctd/views/file/cast`:
 
-Only the profiles respecting the [following api filter conditions](https://github.com/HakaiInstitute/hakai-data-tools/blob/ef34172f6e3e8c858f2379ad473cb10422ca6f85/ctd-tools/rbr-proc/process_unprocessed_hakai_profiles.m#L49) are processed:
+Only the profiles respecting the [following API filter conditions](https://github.com/HakaiInstitute/hakai-data-tools/blob/ef34172f6e3e8c858f2379ad473cb10422ca6f85/ctd-tools/rbr-proc/process_unprocessed_hakai_profiles.m#L49) are processed:
 
 ```matlab
 filterURL = [
@@ -41,11 +39,13 @@ This type of deployment has been implemented to provide the ability to sample re
 
 To be considered a static measurement, a sample needs to respect the following conditions:
 
-```console
-1. The instrument needs to be **maintained at a specific location and depth for at least 2 minutes and 30 seconds** (We recommend leaving the instrument for at least 3 minutes).
-2. The depth throughout that period can only vary by either 10cm, 33% of the depth or up to 1m, whichever is greater.
-3. The instrument needs to be deeper than 10cm in the water.
-```
+!!!warning
+    To be considered a static measurement, a sample needs to respect the following conditions:
+
+    1. The instrument needs to be **maintained at a specific location and depth for at least 2 minutes and 30 seconds** (We recommend leaving the instrument for at least 3 minutes).
+    2. The depth throughout that period can only vary by either 10cm, 33% of the depth or up to 1m, whichever is greater.
+    3. The instrument needs to be deeper than 10cm in the water.
+
 
 #### Dynamic Deployment
 

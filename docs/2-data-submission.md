@@ -1,8 +1,6 @@
 ## Field Data and Metadata Upload
 
-<p align="center">
-<img src="assets/figures/Hakai-ctd-processing-workflow-figure-2-ingestion.png" alt="Ingestion" width="600"/>
-</p>
+![data ingestion](assets/figures/Hakai-ctd-processing-workflow-figure-2-ingestion.png)
 
 ### Field Data Submission
 
@@ -49,7 +47,7 @@ The tool relies on the RBR shortName convention to assign each data column to th
 
 #### Cast Detection
 
-The ["cast detection tool"](https://github.com/HakaiInstitute/hakai-api/blob/main/src/routes/ctd/utils/rbr/detectCasts.js) is a javascript algorithm that is used to detect and split RBR CTD timeseries data into separate profiles. The tool can be used in two modes:
+The ["cast detection tool"](https://github.com/HakaiInstitute/hakai-api/blob/main/src/routes/ctd/utils/rbr/detectCasts.js) is a JavaScript algorithm that is used to detect and split RBR CTD timeseries data into separate profiles. The tool can be used in two modes:
 
 1. Standard: The instrument is considered in the water if the conductivity exceeds the `0.95 mS/cm` threshold
 2. Contain Static Casts: Essentially relies on time gaps to split the timeseries in multiple drops.

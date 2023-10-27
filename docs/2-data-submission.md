@@ -32,7 +32,7 @@ Once uploaded to the Hakai Server, the data is then copied and stored within the
 
 RBR RSK format which is essentially an SQLite3 file which is following RBR's standard format is parsed to an R-Text equivalent file to be ingested within the Hakai Database.
 
-The MatLab Hakai tool used to convert the RSK file can be here <https://github.com/HakaiInstitute/hakai-data-tools/blob/master/ctd-tools/rbr-proc/RSK2HakaiJSON.m>
+The MatLab Hakai tool used to convert the RSK file can be here <https://github.com/HakaiInstitute/hakai-ctd-tools/blob/master/rbr-proc/RSK2HakaiJSON.m>
 The tool essentially is a wrapper around the [RSKTools MatLab package](https://rbr-global.com/support/matlab-tools/) developed by RBR. The tool reads the RSK file via the RSKopen and RSKreaddata functions which loads the RSK data into a MatLab environment structure.
 
 The resulting structure is then stored as a JSON string within the header of the outputted file and the data is stored as a table following the same convention used by the RText format.

@@ -8,11 +8,11 @@ Hakai follows the standard data processing procedures suggested by either the sc
 
 The Hakai RBR CTD Profiles standard processing procedure follows the recommendations provided within the Report [Guidelines for processing RBR CTD profiles](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40578112.pdf) and RBR recommendations.
 
-The main Matlab tool used to process Hakai RBR CTD profiles is maintained and available at [hakai-ctd-tools/ctd-tools/rbr-proc](https://github.com/HakaiInstitute/hakai-data-tools/tree/master/ctd-tools/rbr-proc).
+The main Matlab tool used to process Hakai RBR CTD profiles is maintained and available at [hakai-ctd-tools/ctd-tools/rbr-proc](https://github.com/HakaiInstitute/hakai-ctd-tools/tree/master/rbr-proc).
 
-Where essentially the MatLab script [process_unprocessed_hakai_profiles.m](https://github.com/HakaiInstitute/hakai-data-tools/blob/master/ctd-tools/rbr-proc/process_unprocessed_hakai_profiles.m) is run every 5 minutes on the Hakai server Hecate to retrieve and process the unprocessed profiles available within the Hakai database ctd.ctd_file_cast view through the API endpoint `/ctd/views/file/cast`:
+Where essentially the MatLab script [process_unprocessed_hakai_profiles.m](https://github.com/HakaiInstitute/hakai-ctd-tools/blob/master/rbr-proc/process_unprocessed_hakai_profiles.m) is run every 5 minutes on the Hakai server Hecate to retrieve and process the unprocessed profiles available within the Hakai database ctd.ctd_file_cast view through the API endpoint `/ctd/views/file/cast`:
 
-Only the profiles respecting the [following API filter conditions](https://github.com/HakaiInstitute/hakai-data-tools/blob/ef34172f6e3e8c858f2379ad473cb10422ca6f85/ctd-tools/rbr-proc/process_unprocessed_hakai_profiles.m#L49) are processed:
+Only the profiles respecting the [following API filter conditions](https://github.com/HakaiInstitute/hakai-ctd-tools/blob/0a86a152c53e5458313c498f961267248f6a492b/rbr-proc/process_unprocessed_hakai_profiles.m#L96) are processed:
 
 ```matlab
 filterURL = [
@@ -55,10 +55,10 @@ The dynamic deployment corresponds to a profile measurement. For a more detailed
 
 Hakai Seabird Data Processing workflow follows closely the recommendations provided by Sea-Bird within the [SBE Data Processing Manual](https://www.seabird.com/asset-get.download.jsa?code=251446). Hakai essentially uses a Python wrapper to interface the Seabird SBEDataProcessing software to run the different processing steps involved in the standard processing of the Seabird CTD data.
 
-The Python wrapper to interface the Seabird SBEDataProcessing software maintained and available within the [hakai-data-tools/ctd-tools/seabird-proc/](https://github.com/HakaiInstitute/hakai-data-tools/tree/master/ctd-tools/seabird-proc) repository.
+The Python wrapper to interface the Seabird SBEDataProcessing software maintained and available within the [hakai-ctd-tools/ctd-tools/seabird-proc/](https://github.com/HakaiInstitute/hakai-ctd-tools/tree/master/seabird-proc) repository.
 
-The python wrapper match for a given SBE hex file, the related instrument serial number, and the closest xmlcon calibration file available within the [xmlcon files directory](https://github.com/HakaiInstitute/hakai-data-tools/tree/master/ctd-tools/seabird-proc/xmlcon) prior to the collection date.
+The python wrapper match for a given SBE hex file, the related instrument serial number, and the closest xmlcon calibration file available within the [xmlcon files directory](https://github.com/HakaiInstitute/hakai-ctd-tools/tree/master/seabird-proc/xmlcon) prior to the collection date.
 
-Once the data is converted from their raw hexadecimal data to the engineering format a series of processing steps are applied to the data by following the nearest in time prior processing parameter PSA files associated with this instrument serial number within the [PSA folder](https://github.com/HakaiInstitute/hakai-data-tools/tree/master/ctd-tools/seabird-proc/psa).
+Once the data is converted from their raw hexadecimal data to the engineering format a series of processing steps are applied to the data by following the nearest in time prior processing parameter PSA files associated with this instrument serial number within the [PSA folder](https://github.com/HakaiInstitute/hakai-ctd-tools/tree/master/seabird-proc/psa).
 
 Since the SBEDataProcessing Software is only available for Windows. The tool is run within a dedicated server hosted within the Hakai Victoria Wharf Street office.

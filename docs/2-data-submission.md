@@ -31,7 +31,7 @@ Once uploaded to the Hakai Server, the data is then copied and stored within the
 #### RSK Conversion
 
 RBR RSK format which is essentially an SQLite3 file which is following RBR's standard format is parsed to an R-Text equivalent file to be ingested within the Hakai Database.
-
+<!-- markdown-link-check-disable -->
 The MatLab Hakai tool used to convert the RSK file can be here <https://github.com/HakaiInstitute/hakai-ctd-tools/blob/master/rbr-proc/RSK2HakaiJSON.m>
 The tool essentially is a wrapper around the [RSKTools MatLab package](https://rbr-global.com/support/matlab-tools/) developed by RBR. The tool reads the RSK file via the RSKopen and RSKreaddata functions which loads the RSK data into a MatLab environment structure.
 
@@ -41,7 +41,6 @@ The tool is deployed on the server as a docker container. This tool is used and 
 
 #### RText Data Ingestion
 
-<!-- markdown-link-check-disable -->
 RText or RSK converted data is then parsed and ingested into the Hakai database through the `hakai-api` tool <https://github.com/HakaiInstitute/hakai-api/blob/main/src/routes/ctd/utils/rbr/parse.js>
 
 The tool relies on the RBR shortName convention to assign each data column to the corresponding database table column within the `ctd.raw_ctd_data` table.

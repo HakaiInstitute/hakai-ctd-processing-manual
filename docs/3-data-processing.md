@@ -8,11 +8,13 @@ Hakai follows the standard data processing procedures suggested by either the sc
 
 The Hakai RBR CTD Profiles standard processing procedure follows the recommendations provided within the Report [Guidelines for processing RBR CTD profiles](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40578112.pdf) and RBR recommendations.
 
+<!-- markdown-link-check-disable -->
 The main Matlab tool used to process Hakai RBR CTD profiles is maintained and available at [hakai-ctd-tools/ctd-tools/rbr-proc](https://github.com/HakaiInstitute/hakai-ctd-tools/tree/master/rbr-proc).
 
 Where essentially the MatLab script [process_unprocessed_hakai_profiles.m](https://github.com/HakaiInstitute/hakai-ctd-tools/blob/master/rbr-proc/process_unprocessed_hakai_profiles.m) is run every 5 minutes on the Hakai server Hecate to retrieve and process the unprocessed profiles available within the Hakai database ctd.ctd_file_cast view through the API endpoint `/ctd/views/file/cast`:
 
 Only the profiles respecting the [following API filter conditions](https://github.com/HakaiInstitute/hakai-ctd-tools/blob/0a86a152c53e5458313c498f961267248f6a492b/rbr-proc/process_unprocessed_hakai_profiles.m#L96) are processed:
+<!-- markdown-link-check-enable -->
 
 ```matlab
 filterURL = [

@@ -57,10 +57,12 @@ The dynamic deployment corresponds to a profile measurement. For a more detailed
 
 Hakai Seabird Data Processing workflow follows closely the recommendations provided by Sea-Bird within the [SBE Data Processing Manual](https://www.seabird.com/asset-get.download.jsa?code=251446). Hakai essentially uses a Python wrapper to interface the Seabird SBEDataProcessing software to run the different processing steps involved in the standard processing of the Seabird CTD data.
 
+<!-- markdown-link-check-disable -->
 The Python wrapper to interface the Seabird SBEDataProcessing software maintained and available within the [hakai-ctd-tools/ctd-tools/seabird-proc/](https://github.com/HakaiInstitute/hakai-ctd-tools/tree/master/seabird-proc) repository.
 
 The python wrapper match for a given SBE hex file, the related instrument serial number, and the closest xmlcon calibration file available within the [xmlcon files directory](https://github.com/HakaiInstitute/hakai-ctd-tools/tree/master/seabird-proc/xmlcon) prior to the collection date.
 
 Once the data is converted from their raw hexadecimal data to the engineering format a series of processing steps are applied to the data by following the nearest in time prior processing parameter PSA files associated with this instrument serial number within the [PSA folder](https://github.com/HakaiInstitute/hakai-ctd-tools/tree/master/seabird-proc/psa).
+<!-- markdown-link-check-enable -->
 
 Since the SBEDataProcessing Software is only available for Windows. The tool is run within a dedicated server hosted within the Hakai Victoria Wharf Street office.

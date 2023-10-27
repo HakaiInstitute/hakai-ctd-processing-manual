@@ -1,6 +1,6 @@
 ## Field Data Collection
 
-Data is first collected in the field by the field crew. The minimum required equipment is a CTD instrument unit and a tablet or phone (android or iOS) with the [Device Magic](https://www.devicemagic.com/) application installed on it linked to the Hakai Device Magic account.
+Data is first collected in the field by the field crew. The minimum required equipment is a CTD instrument unit and a tablet or phone (Android or iOS) with the [Device Magic](https://www.devicemagic.com/) application installed on it linked to the Hakai Device Magic account.
 
 ### Field Metadata from form (Device Magic app)
 
@@ -12,9 +12,9 @@ Every drop must be associated with a start/bottom/end time, a station, and a sta
 
 Hakai workflow is compatible with two CTD instrument manufacturer and their respective following profiling instruments:
 
-#### [Sea-Bird Scientific](www.seabird.com)
+#### Sea-Bird Scientific
 
-The compatible instruments include:
+The compatible [Seabird Scientific](https://www.seabird.com) instruments include:
 
 1. [SBE 19plusV2](https://www.seabird.com/sbe-19plus-v2-seacat-profiler-ctd/product?id=60761421596)
 2. [SBE 911 plus](https://www.seabird.com/sbe-911plus-ctd/product?id=60761421595) (potentially)
@@ -22,9 +22,9 @@ The compatible instruments include:
 
 Hakai as of now only supports the SBE 19V2 instrument, that being said, it would be possible to support with very little effort any other profiling instruments from the manufacturer. Please refer to the [Seabird 19plusV2 Standard Operation Protocol manual](https://docs.google.com/document/d/1KFa8QB3JSkSBwPwUhb_FH8x_sM3v4mOx-pAeTz3_xDk/edit?usp=sharing) for a more detailed walkthrough of the different steps associated with the use of the Seabird Instruments as recommended by the Hakai Institute.
 
-#### [RBR](www.rbr-global.com)
+#### RBR
 
-The compatible instruments include:
+The compatible [RBR](https://www.rbr-global.com) instruments include:
 
 1. XR-620
 2. Concerto (recommended Fast)

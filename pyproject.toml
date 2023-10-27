@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "hakai-data"
+version = "0.1.0"
+description = "Static website for Hakai Data generally and for Data Mobilization Team"
+authors = ["Brett Johnson <brettthomasjohnson@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+mkdocs = "^1.5.3"
+mkdocs-material = "^9.4.5"
+importlib-metadata = "^6.8.0"
+mkdocs-redirects = "^1.2.1"
+mkdocs-git-revision-date-localized-plugin = "^1.2.1"
+plotly = "^5.18.0"
+pygithub = "^2.1.1"
+pandas = "^2.1.2"
+loguru = "^0.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

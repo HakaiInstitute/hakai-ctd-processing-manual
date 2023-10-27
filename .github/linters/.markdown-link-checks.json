@@ -1,0 +1,12 @@
+{
+    "ignorePatterns": [
+      {
+        "pattern": "^https://data.hakai.org/maps|https://data.hakai.org/maps|www.wunderground.com/|https://github.com/orgs/HakaiInstitute/projects/10/views/2"
+      }
+    ],
+    "timeout": "20s",
+    "retryOn429": true,
+    "retryCount": 5,
+    "fallbackRetryDelay": "30s",
+    "aliveStatusCodes": [200, 206, 403]
+  }

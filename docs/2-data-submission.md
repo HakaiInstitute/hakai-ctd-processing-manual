@@ -1,8 +1,7 @@
 ## Field Data and Metadata Upload
 
-<p align="center">
-<img src="figures/Hakai-ctd-processing-workflow-figure-2-ingestion.png" alt="Ingestion" width="600"/>
-</p>
+![data ingestion](assets/figures/Hakai-ctd-processing-workflow-figure-2-ingestion.png)
+
 ### Field Data Submission
 
 Once a field survey is completed, save and submit the field form. Retrieve the corresponding lab form within the associated lab tablet and review the different fields entered in the field. Confirm the metadata submitted and complete the final submission of the lab form.
@@ -13,14 +12,14 @@ Once submitted, those lab forms are sent to the Hakai Servers and integrated int
 
 The data must be first downloaded from the CTD instruments following a survey through the manufacturer proprietary software ( see each respective [seabird](https://docs.google.com/document/d/1KFa8QB3JSkSBwPwUhb_FH8x_sM3v4mOx-pAeTz3_xDk/edit?usp=sharing) or [RBR](https://docs.google.com/document/d/1CdPT_7pTRghaBxCO5jRZT-BRfMDt4W194HIRs06M6A4/edit?usp=sharing) SOP manual for details)
 
-Once downloaded, the data needs to be manually uploaded to the [Hakai Data Portal ](https://hecate.hakai.org/portal2) (if needed access request can be made [here](https://hecate.hakai.org/auth/access-request.php)). Follow the present procedure:
+Once downloaded, the data needs to be manually uploaded to the [Hakai Data Portal](https://hecate.hakai.org/portal2) (if needed access request can be made [here](https://hecate.hakai.org/auth/access-request.php)). Follow the present procedure:
 
 1. Login with your authorized email account
 2. Go to the [CTD Upload page](https://hecate.hakai.org/portal2/ctd/upload)
 3. Select the appropriate Work Area
 4. Drag and drop the files downloaded from the instruments
    - RBR \*.rsk file (likely a single file per survey)
-   - RBR RText Engineering _.txt + _.hex file (only for older XR-620 units)
+   - RBR RText Engineering _.txt +_.hex file (only for older XR-620 units)
 5. Confirm that upload was executed successfully
 
 ## Instrument Raw Data Ingestion
@@ -32,8 +31,8 @@ Once uploaded to the Hakai Server, the data is then copied and stored within the
 #### RSK Conversion
 
 RBR RSK format which is essentially an SQLite3 file which is following RBR's standard format is parsed to an R-Text equivalent file to be ingested within the Hakai Database.
-
-The MatLab Hakai tool used to convert the RSK file can be here https://github.com/HakaiInstitute/hakai-data-tools/blob/master/ctd-tools/rbr-proc/RSK2HakaiJSON.m
+<!-- markdown-link-check-disable -->
+The MatLab Hakai tool used to convert the RSK file can be here <https://github.com/HakaiInstitute/hakai-ctd-tools/blob/master/rbr-proc/RSK2HakaiJSON.m>
 The tool essentially is a wrapper around the [RSKTools MatLab package](https://rbr-global.com/support/matlab-tools/) developed by RBR. The tool reads the RSK file via the RSKopen and RSKreaddata functions which loads the RSK data into a MatLab environment structure.
 
 The resulting structure is then stored as a JSON string within the header of the outputted file and the data is stored as a table following the same convention used by the RText format.
@@ -42,20 +41,21 @@ The tool is deployed on the server as a docker container. This tool is used and 
 
 #### RText Data Ingestion
 
-RText or RSK converted data is then parsed and ingested into the Hakai database through the `hakai-api` tool https://github.com/HakaiInstitute/hakai-api/blob/main/src/routes/ctd/utils/rbr/parse.js
+RText or RSK converted data is then parsed and ingested into the Hakai database through the `hakai-api` tool <https://github.com/HakaiInstitute/hakai-api/blob/main/src/routes/ctd/utils/rbr/parse.js>
 
 The tool relies on the RBR shortName convention to assign each data column to the corresponding database table column within the `ctd.raw_ctd_data` table.
 
 #### Cast Detection
 
-The ["cast detection tool"](https://github.com/HakaiInstitute/hakai-api/blob/main/src/routes/ctd/utils/rbr/detectCasts.js) is a javascript algorithm that is used to detect and split RBR CTD timeseries data into separate profiles. The tool can be used in two modes:
+The ["cast detection tool"](https://github.com/HakaiInstitute/hakai-api/blob/main/src/routes/ctd/utils/rbr/detectCasts.js) is a JavaScript algorithm that is used to detect and split RBR CTD timeseries data into separate profiles. The tool can be used in two modes:
+<!-- markdown-link-check-enable-->
 
 1. Standard: The instrument is considered in the water if the conductivity exceeds the `0.95 mS/cm` threshold
 2. Contain Static Casts: Essentially relies on time gaps to split the timeseries in multiple drops.
 
 ### Seabird
 
-Seabird \*.hex files are considered been each associated to a unique drop and for this reason the conversion and ingestion process is performed at the very beginning of the [Seabird Data Processing](#Seabird-Data-Processing) step.
+Seabird \*.hex files are considered been each associated to a unique drop and for this reason the conversion and ingestion process is performed at the very beginning of the [Seabird Data Processing](3-data-processing.md#seabird-data-processing) step.
 
 ## Field Data and Metadata Annotation
 

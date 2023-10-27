@@ -1,0 +1,66 @@
+site_description: CTD Processing Manual
+site_name: Hakai CTD Processing Manual
+repo_url: https://github.com/HakaiInstitute/hakai-ctd-processing-manual
+repo_name: HakaiInstitute/hakai-ctd-processing-manual
+edit_uri: tree/main/docs
+copyright: Copyright &copy; Hakai Institute
+
+nav:
+    - Home: index.md
+    - Field Collection: 1-field-data-collection.md
+    - Submission: 2-data-submission.md
+    - Processing: 3-data-processing.md
+    - Quality Control: 4-data-quality-control.md
+    - Distribution: 5-data-distribution.md
+
+theme:
+    name: material
+    logo: assets/logo.png
+    favicon: assets/favicon.png
+    palette:
+  # Palette toggle for light mode
+      - media: "(prefers-color-scheme: light)"
+        scheme: custom
+        primary: "anything" # see css color
+        accent: pink
+        toggle:
+          icon: material/brightness-7
+          name: Switch to dark mode
+
+      # Palette toggle for dark mode
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: "anything" # see css color
+        accent: pink
+        toggle:
+          icon: material/brightness-4
+          name: Switch to light mode
+
+    features:
+      - navigation.tracking
+      - navigation.expand
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - navigation.expand
+      - toc.follow
+      - toc.integrate 
+      - navigation.top
+      - content.action.view
+
+extra_css: 
+  - assets/stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/HakaiInstitute/hakai-ctd-processing-manual

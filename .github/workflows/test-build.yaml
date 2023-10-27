@@ -1,0 +1,38 @@
+name: Build documentation
+
+on:
+  pull_request:
+    branches:
+      - main
+      - development
+
+jobs:
+  deploy_docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+            fetch-depth: 0
+      - name: Lint Code Base
+        uses: github/super-linter/slim@v5
+        env:
+            VALIDATE_ALL_CODEBASE: False
+            DEFAULT_BRANCH: main
+            LOG_LEVEL: WARN
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install Requirements
+        run: |
+          pip install poetry
+          poetry install
+      - name: Build docs
+        run: |
+          poetry run mkdocs build -s -d site
+      - name: test links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+            use-quiet-mode: 'yes'
+            use-verbose-mode: 'yes'
+            config-file: .github/linters/.markdown-link-checks.json

@@ -4,9 +4,7 @@ Hakai uses a unique tool to automatically QC the CTD profile data. The QCing too
 
 The general QAQC workflow is summarized in the following diagram:
 
-<p align="center">
-<img src="figures/Hakai-ctd-processing-workflow-figure-4-qc.png" alt="QC" width="600"/>
-</p>
+![Quality Control](assets/figures/Hakai-ctd-processing-workflow-figure-4-qc.png)
 
 ### Automated Data QA QC (provisional data)
 
@@ -20,7 +18,7 @@ The following configuration files are used to apply the different tests to each 
 1. [Hakai Tests Configuration](https://github.com/HakaiInstitute/hakai-profile-qaqc/blob/main/hakai_profile_qc/config/hakai_ctd_profile_tests_config.json)
 1. [Hakai Profiles Grey List](https://github.com/HakaiInstitute/hakai-profile-qaqc/blob/main/hakai_profile_qc/HakaiProfileDatasetGreyList.csv): Hakai's Grey List overwrite any flag values obtained through the different test for a given one.
 
-For a more detailed description of the different tests applied, please refer to the [tests_description section](https://github.com/HakaiInstitute/hakai-profile-qaqc/blob/main/tests_description.md).
+For a more detailed description of the different tests applied, please refer to the [tests_description section](https://github.com/HakaiInstitute/hakai-profile-qaqc/blob/main/doc/tests_description.md).
 
 ### Manual Review QA QC (research-ready data)
 

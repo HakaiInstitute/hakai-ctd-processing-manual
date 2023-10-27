@@ -41,6 +41,7 @@ The tool is deployed on the server as a docker container. This tool is used and 
 
 #### RText Data Ingestion
 
+<!-- markdown-link-check-disable -->
 RText or RSK converted data is then parsed and ingested into the Hakai database through the `hakai-api` tool <https://github.com/HakaiInstitute/hakai-api/blob/main/src/routes/ctd/utils/rbr/parse.js>
 
 The tool relies on the RBR shortName convention to assign each data column to the corresponding database table column within the `ctd.raw_ctd_data` table.
@@ -48,6 +49,7 @@ The tool relies on the RBR shortName convention to assign each data column to th
 #### Cast Detection
 
 The ["cast detection tool"](https://github.com/HakaiInstitute/hakai-api/blob/main/src/routes/ctd/utils/rbr/detectCasts.js) is a JavaScript algorithm that is used to detect and split RBR CTD timeseries data into separate profiles. The tool can be used in two modes:
+<!-- markdown-link-check-enable-->
 
 1. Standard: The instrument is considered in the water if the conductivity exceeds the `0.95 mS/cm` threshold
 2. Contain Static Casts: Essentially relies on time gaps to split the timeseries in multiple drops.
